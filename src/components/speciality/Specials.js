@@ -1,7 +1,7 @@
 import React from 'react';
 
 import './Specials.css';
-import Special from './Special';
+import SpecialItem from './Specialtem';
 
 // Special images
 import special1 from '../../../src/images/special-img-1.jpg';
@@ -78,7 +78,7 @@ const Specials = () => {
 
       <div className="box-container">
         {specials.map(special => (
-          <Special
+          <SpecialItem
             title={special.title}
             image={special.image}
             specialIcon={special.specialIcon}

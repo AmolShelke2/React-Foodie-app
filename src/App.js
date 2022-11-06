@@ -1,9 +1,10 @@
-import React from "react";
-import "./App.css";
+import React from 'react';
+import './App.css';
 
-import Header from "./components/header/Header";
-import Home from "./components/home/Home";
-import Specials from "./components/speciality/Specials";
+import Header from './components/header/Header';
+import Home from './components/home/Home';
+import Specials from './components/speciality/Specials';
+import Populars from './components/popular/Populars';
 
 const App = () => {
   return (
@@ -11,6 +12,7 @@ const App = () => {
       <Header />
       <Home />
       <Specials />
+      <Populars />
     </div>
   );
 };

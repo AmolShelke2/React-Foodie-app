@@ -1,7 +1,7 @@
 import React from 'react';
-import './Special.css';
+import './SpecialItem.css';
 
-const Special = props => {
+const SpecialItem = props => {
   return (
     <div className="box">
       <img src={props.image} className="image" alt="specials src" />
@@ -14,4 +14,4 @@ const Special = props => {
   );
 };
 
-export default Special;
+export default SpecialItem;
