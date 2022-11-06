@@ -24,7 +24,6 @@ const Header = () => {
         <a href="#!">home</a>
         <a href="#!">speciality</a>
         <a href="#!">popular</a>
-        <a href="#!">preview</a>
         <a href="#!">order</a>
       </nav>
     </header>
