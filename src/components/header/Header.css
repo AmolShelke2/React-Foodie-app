@@ -7,7 +7,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: #fff;
+  /* background: #fff; */
   padding: 2rem 9%;
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
 }

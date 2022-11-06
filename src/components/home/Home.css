@@ -4,7 +4,6 @@
   gap: 1.5rem;
   min-height: 100vh;
   align-items: center;
-  background: url("../../../src/images/home-bg.jpg");
   background-size: cover;
   background-position: center;
 }
@@ -16,12 +15,13 @@
 
 .home .content h3 {
   font-size: 5rem;
-  color: #333;
+  color: #fff;
+  text-shadow: 0 2px 3px #555;
 }
 
 .home .content p {
   font-size: 1.7rem;
-  color: #666;
+  color: #000;
   padding: 1rem 0;
 }
 

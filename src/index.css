@@ -17,7 +17,7 @@
 }
 
 *::selection {
-  background-color: var(--red);
+  background-color: #2a2a2a;
   color: #fff;
 }
 
@@ -29,5 +29,5 @@ html {
 }
 
 body {
-  background: #f7f7f7;
+  background: linear-gradient(to bottom, #c7eef5, #c3a9ff, #40005d);
 }
