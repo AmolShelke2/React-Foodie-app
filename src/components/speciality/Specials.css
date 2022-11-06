@@ -1,0 +1,12 @@
+.speciality {
+  background-image: url("../../../src/images/home-bg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top center;
+}
+
+.speciality .box-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}

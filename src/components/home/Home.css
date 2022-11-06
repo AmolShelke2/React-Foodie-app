@@ -6,6 +6,7 @@
   align-items: center;
   background-size: cover;
   background-position: center;
+  background: linear-gradient(to bottom, #c7eef5, #c3a9ff, #40005d);
 }
 
 .home .content {
