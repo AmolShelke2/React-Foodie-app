@@ -1,6 +1,28 @@
-# Getting Started with Create React App
+# Foodie App React
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Fully Responsive Foodie Landing page created with ReactJS.
+I have already created this project with HTML CSS and JavaScript,
+but now I created it once again with React. By making
+seperate components and using useState hook.
+
+<hr>
+
+## Tech Stack:
+
+- HTML
+- CSS
+- React
+
+<hr>
+
+## Features
+
+- Hamburger Menu
+- Navbar responsive
+- Fully Responsive
+- use state to manage and create component
+
+<hr>
 
 ## Available Scripts
 
