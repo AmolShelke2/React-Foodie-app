@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./Header.css";
 
 const Header = () => {
-  const [show, setShow] = useState(true);
+  const [show, setShow] = useState(false);
 
   const showAndHideHandler = () => {
     setShow(!show);
