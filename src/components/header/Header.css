@@ -79,10 +79,10 @@ header .navbar a:hover {
     padding: 1.5rem;
     margin: 1.5rem;
     display: block;
-    border: 0.2rem solid rgba(0, 0, 0, 0.1);
+    border: 0.2rem solid #666;
     border-left: 0.5rem solid var(--red);
     background: linear-gradient(to left, #c7eef5, #c3a9ff);
-    color: #888;
-    text-shadow: 0 2px 3px #fff;
+    color: #fff;
+    text-shadow: 0 2px 3px #888;
   }
 }
