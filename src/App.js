@@ -5,6 +5,7 @@ import Header from './components/header/Header';
 import Home from './components/home/Home';
 import Specials from './components/speciality/Specials';
 import Populars from './components/popular/Populars';
+import { Steps } from './components/steps/Steps';
 
 const App = () => {
   return (
@@ -13,6 +14,7 @@ const App = () => {
       <Home />
       <Specials />
       <Populars />
+      <Steps />
     </div>
   );
 };

@@ -1,0 +1,51 @@
+.steps {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 1rem;
+}
+
+.box-container {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.steps .box {
+  flex: 1 1 25rem;
+  text-align: center;
+  padding: 1rem;
+  position: relative;
+}
+
+.arrow {
+  position: absolute;
+  right: 5%;
+  bottom: 50%;
+}
+
+.steps .box .step {
+  border-radius: 50%;
+  box-shadow: 0 0.5rem 2rem rgba(0, 0, 0, 0.1);
+  border: 1rem solid #fff;
+  margin-right: 1rem;
+}
+
+.steps .box h3 {
+  font-size: 2rem;
+  color: #333;
+  padding: 1rem;
+}
+
+@media (max-width: 1310px) {
+  .arrow {
+    right: 3%;
+    bottom: 50%;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .arrow {
+    display: none;
+  }
+}
