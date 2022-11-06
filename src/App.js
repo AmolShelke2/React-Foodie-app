@@ -6,7 +6,7 @@ import Home from './components/home/Home';
 import Specials from './components/speciality/Specials';
 import Populars from './components/popular/Populars';
 import { Steps } from './components/steps/Steps';
-import { ImageGallery } from './components/gallery/ImageGallery';
+import ImageGallery from './components/gallery/ImageGallery';
 
 const App = () => {
   return (
