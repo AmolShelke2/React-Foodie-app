@@ -1,12 +1,12 @@
-import React from "react";
-import "./Special.css";
+import React from 'react';
+import './Special.css';
 
-const Special = (props) => {
+const Special = props => {
   return (
     <div className="box">
-      <img src={props.image} className="image" alt="special image" />
+      <img src={props.image} className="image" alt="specials src" />
       <div className="content">
-        <img src={props.specialIcon} />
+        <img src={props.specialIcon} alt="special src icon" />
         <h3>{props.title}</h3>
         <p>{props.text}</p>
       </div>

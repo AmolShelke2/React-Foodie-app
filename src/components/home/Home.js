@@ -1,7 +1,7 @@
-import React from "react";
+import React from 'react';
 
-import homeImage from "../../../src/images/home-img.png";
-import "./Home.css";
+import homeImage from '../../../src/images/home-img.png';
+import './Home.css';
 
 const Home = () => {
   return (
@@ -20,7 +20,7 @@ const Home = () => {
       </div>
 
       <div className="image">
-        <img src={homeImage} alt="home page image" />
+        <img src={homeImage} alt="home page" />
       </div>
     </section>
   );

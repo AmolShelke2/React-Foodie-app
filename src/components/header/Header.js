@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import "./Header.css";
+import React, { useState } from 'react';
+import './Header.css';
 
 const Header = () => {
   const [show, setShow] = useState(false);
@@ -20,7 +20,7 @@ const Header = () => {
         onClick={showAndHideHandler}
       ></div>
 
-      <nav className={show ? "navbar active" : "navbar"} id="nav">
+      <nav className={show ? 'navbar active' : 'navbar'} id="nav">
         <a href="#!">home</a>
         <a href="#!">speciality</a>
         <a href="#!">popular</a>
