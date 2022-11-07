@@ -11,7 +11,7 @@ const OrderForm = () => {
     <form onSubmit={submitHandler}>
       <div className="inputBox">
         <input type="text" placeholder="name" />
-        <input type="email" placeholder="emial" />
+        <input type="email" placeholder="email" />
       </div>
 
       <div className="inputBox">
