@@ -3,8 +3,6 @@ import React from 'react';
 import './ImageGalleryItem.css';
 
 const ImageGalleryItem = props => {
-  console.log(props);
-
   return (
     <div className="box">
       <img src={props.image} alt="gallery item" />

@@ -1,0 +1,26 @@
+import React from 'react';
+
+import './Order.css';
+import OrderForm from './OrderForm';
+
+// Image
+import OrderImage from '../../images/order-img.jpg';
+
+const Order = () => {
+  return (
+    <section className="order">
+      <h1 className="heading">
+        Order <span>Now</span>
+      </h1>
+      <div className="row">
+        <div className="image">
+          <img src={OrderImage} alt="order now " />
+        </div>
+
+        <OrderForm />
+      </div>
+    </section>
+  );
+};
+
+export default Order;
