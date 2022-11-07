@@ -8,6 +8,7 @@ import Populars from './components/popular/Populars';
 import Steps from './components/steps/Steps';
 import ImageGallery from './components/gallery/ImageGallery';
 import Order from './components/order/Order';
+import Footer from './components/footer/Footer';
 
 const App = () => {
   return (
@@ -19,6 +20,7 @@ const App = () => {
       <Steps />
       <ImageGallery />
       <Order />
+      <Footer />
     </div>
   );
 };

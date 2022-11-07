@@ -9,6 +9,7 @@ const OrderForm = () => {
 
   return (
     <form onSubmit={submitHandler}>
+      <p>Tell us your favorite food and we will deliver it to you!</p>
       <div className="inputBox">
         <input type="text" placeholder="name" />
         <input type="email" placeholder="email" />
@@ -18,8 +19,6 @@ const OrderForm = () => {
         <input type="number" placeholder="phone number" />
         <input type="text" placeholder="food name" />
       </div>
-
-      <textarea placeholder="address" cols="30" rows="10"></textarea>
 
       <button type="submit" className="btn">
         Order now
