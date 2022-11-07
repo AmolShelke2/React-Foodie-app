@@ -8,7 +8,7 @@ import step4 from '../../../src/images/step-4.jpg';
 
 import arrowRight from './arrow.png';
 
-export const Steps = () => {
+const Steps = () => {
   return (
     <section className="steps">
       <h2 className="heading">
@@ -41,3 +41,5 @@ export const Steps = () => {
     </section>
   );
 };
+
+export default Steps;
