@@ -1,6 +1,6 @@
 import React from 'react';
 
-import './Specials.css';
+import './styles.css';
 import SpecialItem from './Specialtem';
 
 import { specialsData } from '../Data';

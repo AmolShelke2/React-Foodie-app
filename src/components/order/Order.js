@@ -1,6 +1,6 @@
 import React from 'react';
 
-import './Order.css';
+import './styles.css';
 import OrderForm from './OrderForm';
 
 // Image

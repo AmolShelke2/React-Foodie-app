@@ -1,6 +1,6 @@
 import React from 'react';
 
-import './ImageGallery.css';
+import './styles.css';
 
 // The image gallery data
 import { imageGalleryData } from '../Data';

@@ -1,5 +1,4 @@
 import React from 'react';
-import './SpecialItem.css';
 
 const SpecialItem = props => {
   return (

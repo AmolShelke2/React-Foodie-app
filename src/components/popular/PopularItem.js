@@ -1,7 +1,5 @@
 import React from 'react';
 
-import './PopularItem.css';
-
 const PopularItem = props => {
   return (
     <div className="box">

@@ -1,7 +1,5 @@
 import React from 'react';
 
-import './ImageGalleryItem.css';
-
 const ImageGalleryItem = props => {
   return (
     <div className="box">

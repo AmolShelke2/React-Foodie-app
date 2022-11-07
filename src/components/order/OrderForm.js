@@ -1,7 +1,5 @@
 import React from 'react';
 
-import './OrderForm.css';
-
 const OrderForm = () => {
   const submitHandler = e => {
     e.preventDefault();

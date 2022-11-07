@@ -1,5 +1,6 @@
 import React from 'react';
-import './Populars.css';
+
+import './styles.css';
 
 import PopularItem from './PopularItem';
 
