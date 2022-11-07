@@ -22,6 +22,18 @@ seperate components and using useState hook.
 - Fully Responsive
 - use state to manage and create component
 
+## Sections
+
+<ol>
+
+<li>Header Section</li>
+<li>Home Section</li>
+<li>Specials Section</li>
+<li>Populars Section</li>
+<li>Order Section</li>
+<li>Footer Section</li>
+</ol>
+
 <hr>
 
 ## Available Scripts
