@@ -50,6 +50,14 @@
 }
 
 
+.inputBox input[type='text'] {
+    text-transform: capitalize;
+}
+
+.inputBox input[type='email'] {
+    text-transform: lowercase;
+}
+
 @media (max-width: 1270px) {
     .inputBox input {
         width: 30rem;

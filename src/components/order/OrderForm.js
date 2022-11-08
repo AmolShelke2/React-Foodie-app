@@ -6,8 +6,10 @@ const OrderForm = () => {
   const [userEmailInput, setUserEmailInput] = useState('');
   const [userFoodInput, setUserFoodInput] = useState('');
 
+  // Input Hanlders
   const userNameChangeHandler = e => {
-    setUserNameInput(e.target.value);
+    const inputVal = e.target.value;
+    setUserNameInput(inputVal);
   };
 
   const userPhoneNumberChangeHandler = e => {
@@ -25,10 +27,26 @@ const OrderForm = () => {
   const submitHandler = e => {
     e.preventDefault();
 
+    validateNameInput(userNameInput);
+    validatePhoneNumber(userPhoneNumberInput);
+
     setUserNameInput('');
     setUserEmailInput('');
-    setUserFoodInput('');
     setUserPhoneNumber('');
+    setUserFoodInput('');
+  };
+
+  // Input Validator functions
+  const validateNameInput = input => {
+    if (input === '') {
+      alert('Username cannnot be empty');
+    }
+  };
+
+  const validatePhoneNumber = input => {
+    if (input.length < 10 || input.length > 10) {
+      alert('Please Enter a valid Number');
+    }
   };
 
   return (
@@ -54,7 +72,7 @@ const OrderForm = () => {
       <div className="inputBox">
         <label>Email</label>
         <input
-          type="text"
+          type="email"
           value={userEmailInput}
           onChange={userEmailChangeHandler}
         />
