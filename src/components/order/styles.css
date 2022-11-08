@@ -47,6 +47,14 @@
     padding: 1rem 2rem;
     color: #000;
     border-radius: 5px;
+    margin-bottom: 1rem;
+}
+
+.inputBox p {
+    color: red;
+    font-size: 1rem;
+    text-transform: capitalize;
+    font-weight: bold;
 }
 
 

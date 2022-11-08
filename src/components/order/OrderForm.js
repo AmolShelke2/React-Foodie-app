@@ -6,6 +6,12 @@ const OrderForm = () => {
   const [userEmailInput, setUserEmailInput] = useState('');
   const [userFoodInput, setUserFoodInput] = useState('');
 
+  const [errorMessages, setErrorMessages] = useState({
+    userNameError: '',
+    userPhoneNumberError: '',
+    userEmailError: '',
+  });
+
   // Input Hanlders
   const userNameChangeHandler = e => {
     const inputVal = e.target.value;
@@ -40,15 +46,24 @@ const OrderForm = () => {
   // Input Validator functions
   const validateNameInput = input => {
     if (input === '') {
-      alert('Username cannnot be empty');
+      setErrorMessages({
+        ...errorMessages,
+        userNameError: 'Username cannnot be empty',
+      });
     }
   };
 
   const validatePhoneNumber = input => {
     if (input === '') {
-      alert('Please Enter Your Phone Number');
+      setErrorMessages({
+        ...errorMessages,
+        userPhoneNumberError: 'Please Enter Your Phone Number',
+      });
     } else if (input.length < 10 || input.length > 10) {
-      alert('Please Enter a valid Number');
+      setErrorMessages({
+        ...errorMessages,
+        userPhoneNumberError: 'Please Enter a valid Phone Number',
+      });
     }
   };
 
@@ -56,11 +71,16 @@ const OrderForm = () => {
     const mailFormat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
 
     if (input.match(mailFormat)) {
-      alert('Email address is valid');
     } else if (input === '') {
-      alert('please entered a email address');
+      setErrorMessages({
+        ...errorMessages,
+        userEmailError: 'Please enter a email address',
+      });
     } else {
-      alert('You have Entered Invalid Email address');
+      setErrorMessages({
+        ...errorMessages,
+        userEmailError: 'You have entered a invalid email address',
+      });
     }
   };
 
@@ -73,6 +93,7 @@ const OrderForm = () => {
           value={userNameInput}
           onChange={userNameChangeHandler}
         />
+        <p>{errorMessages.userNameError}</p>
       </div>
 
       <div className="inputBox">
@@ -82,6 +103,7 @@ const OrderForm = () => {
           value={userPhoneNumberInput}
           onChange={userPhoneNumberChangeHandler}
         />
+        <p>{errorMessages.userPhoneNumberError}</p>
       </div>
 
       <div className="inputBox">
@@ -91,6 +113,7 @@ const OrderForm = () => {
           value={userEmailInput}
           onChange={userEmailChangeHandler}
         />
+        <p>{errorMessages.userEmailError}</p>
       </div>
 
       <div className="inputBox">
