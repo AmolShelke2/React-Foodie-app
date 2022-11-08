@@ -1,15 +1,11 @@
-.order {
-    margin-bottom: 2rem;
-}
-
 .order .row {
     padding: 2rem;
-    box-shadow: 0 0.5 1rem rgba(0, 0, 0, .1);
+    box-shadow: 0 0.5 1rem rgba(0, 0, 0, 0.1);
     background: #fff;
     display: flex;
     flex-wrap: wrap;
     gap: 1.5rem;
-    border-radius: .5rem;
+    border-radius: 0.5rem;
 }
 
 .order .row .image {
@@ -20,45 +16,46 @@
     height: 100%;
     width: 100%;
     object-fit: cover;
-    border-radius: .5rem;
+    border-radius: 0.5rem;
 }
 
 .order .row form {
-    flex: 1 1 50rem;
-    text-align: center;
+    flex: 1 1 20rem;
+    padding: 1rem;
+    background-color: #c3a9ff;
+    border-radius: 5px;
+}
+
+.inputBox {
+    display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-    padding: 1rem;
-    margin: 5rem auto;
+    margin-bottom: 1rem;
 }
 
-.order .row form p {
+.inputBox label {
     font-size: 2rem;
+    color: #888;
+    text-shadow: 0 1px 2px #fff;
     font-weight: bold;
-    margin-bottom: 3rem;
 }
 
-.order .row form .inputBox {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-}
-
-.order .row form .inputBox input {
-    padding: 1rem;
-    margin: 1rem 0;
-    font-size: 1.7rem;
-    color: #333;
-    text-transform: none;
-    border: 0.1rem solid rgba(0, 0, 0, 0.3);
-    border-radius: 0.5rem;
-    width: 49%;
+.inputBox input {
+    border: 1px solid #fff;
+    width: 50rem;
+    padding: 1rem 2rem;
 }
 
 
-@media screen and (max-width: 800px) {
-    .order .row form p {
-        font-size: 1.4rem;
+@media (max-width: 1270px) {
+    .inputBox input {
+        width: 30rem;
+    }
+}
+
+
+@media (max-width: 600px) {
+    .inputBox input {
+        width: 30rem;
     }
 }

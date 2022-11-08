@@ -1,25 +1,39 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 const OrderForm = () => {
+  const [userNameInput, setUserNameInput] = useState('');
+  const [userPhoneNumberInput, setUserPhoneNumber] = useState('');
+  const [userEmailInput, setUserEmailInput] = useState('');
+  const [userFoodInput, setUserFoodInput] = useState('');
+
   const submitHandler = e => {
     e.preventDefault();
   };
 
   return (
     <form onSubmit={submitHandler}>
-      <p>Tell us your favorite food and we will deliver it to you!</p>
       <div className="inputBox">
-        <input type="text" placeholder="name" />
-        <input type="email" placeholder="email" />
+        <label>name</label>
+        <input type="text" value={userNameInput} />
       </div>
 
       <div className="inputBox">
-        <input type="number" placeholder="phone number" />
-        <input type="text" placeholder="food name" />
+        <label>Phone</label>
+        <input type="number" value={userPhoneNumberInput} />
+      </div>
+
+      <div className="inputBox">
+        <label>Email</label>
+        <input type="text" value={userEmailInput} />
+      </div>
+
+      <div className="inputBox">
+        <label>Food</label>
+        <input type="text" value={userFoodInput} />
       </div>
 
       <button type="submit" className="btn">
-        Order now
+        order now
       </button>
     </form>
   );
