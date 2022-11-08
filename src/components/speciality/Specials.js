@@ -7,7 +7,7 @@ import { specialsData } from '../Data';
 
 const Specials = () => {
   return (
-    <section className="speciality">
+    <section className="speciality" id="specials">
       <h1 className="heading">
         our <span>Speciality</span>
       </h1>

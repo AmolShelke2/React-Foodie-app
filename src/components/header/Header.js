@@ -21,10 +21,11 @@ const Header = () => {
       ></div>
 
       <nav className={show ? 'navbar active' : 'navbar'} id="nav">
-        <a href="#!">home</a>
-        <a href="#!">speciality</a>
-        <a href="#!">popular</a>
-        <a href="#!">order</a>
+        <a href="#home">home</a>
+        <a href="#specials">speciality</a>
+        <a href="#popular">popular</a>
+        <a href="#gallery">gallery</a>
+        <a href="#order">order</a>
       </nav>
     </header>
   );

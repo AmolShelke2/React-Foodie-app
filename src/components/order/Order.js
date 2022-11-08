@@ -8,7 +8,7 @@ import OrderImage from '../../images/order-img.jpg';
 
 const Order = () => {
   return (
-    <section className="order">
+    <section className="order" id="order">
       <h1 className="heading">
         Order <span>Now</span>
       </h1>

@@ -29,6 +29,7 @@ const OrderForm = () => {
 
     validateNameInput(userNameInput);
     validatePhoneNumber(userPhoneNumberInput);
+    validateEmail(userEmailInput);
 
     setUserNameInput('');
     setUserEmailInput('');
@@ -44,8 +45,22 @@ const OrderForm = () => {
   };
 
   const validatePhoneNumber = input => {
-    if (input.length < 10 || input.length > 10) {
+    if (input === '') {
+      alert('Please Enter Your Phone Number');
+    } else if (input.length < 10 || input.length > 10) {
       alert('Please Enter a valid Number');
+    }
+  };
+
+  const validateEmail = input => {
+    const mailFormat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+
+    if (input.match(mailFormat)) {
+      alert('Email address is valid');
+    } else if (input === '') {
+      alert('please entered a email address');
+    } else {
+      alert('You have Entered Invalid Email address');
     }
   };
 

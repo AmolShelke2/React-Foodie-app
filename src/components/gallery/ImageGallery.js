@@ -9,7 +9,7 @@ import ImageGalleryItem from './ImageGalleryItem';
 
 const ImageGallery = () => {
   return (
-    <section className="gallery">
+    <section className="gallery" id="gallery">
       <h1 className="heading">
         Our food <span>gallery</span>
       </h1>
