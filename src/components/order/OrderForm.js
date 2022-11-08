@@ -37,6 +37,14 @@ const OrderForm = () => {
     validatePhoneNumber(userPhoneNumberInput);
     validateEmail(userEmailInput);
 
+    const userInfoData = {
+      name: userNameInput,
+      phone: userPhoneNumberInput,
+      email: userEmailInput,
+    };
+
+    console.log(userInfoData);
+
     setUserNameInput('');
     setUserEmailInput('');
     setUserPhoneNumber('');
