@@ -1,95 +1,59 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 const OrderForm = () => {
-  const [userNameInput, setUserNameInput] = useState('');
-  const [userPhoneNumberInput, setUserPhoneNumber] = useState('');
-  const [userEmailInput, setUserEmailInput] = useState('');
-  const [userFoodInput, setUserFoodInput] = useState('');
-
-  const [errorMessages, setErrorMessages] = useState({
-    userNameError: '',
-    userPhoneNumberError: '',
-    userEmailError: '',
-  });
-
-  // Input Hanlders
-  const userNameChangeHandler = e => {
-    const inputVal = e.target.value;
-    setUserNameInput(inputVal);
+  const initalValues = {
+    username: '',
+    userPhone: '',
+    email: '',
+    userFood: '',
   };
 
-  const userPhoneNumberChangeHandler = e => {
-    setUserPhoneNumber(e.target.value);
-  };
+  const [formValues, setFormValues] = useState(initalValues);
+  const [formErrors, setFormErrors] = useState({});
+  const [isSubmit, setIsSubmit] = useState(false);
 
-  const userEmailChangeHandler = e => {
-    setUserEmailInput(e.target.value);
-  };
+  const inputChangeHandler = e => {
+    const { name, value } = e.target;
 
-  const userFoodChangeHandler = e => {
-    setUserFoodInput(e.target.value);
+    setFormValues({ ...formValues, [name]: value });
   };
 
   const submitHandler = e => {
     e.preventDefault();
-
-    validateNameInput(userNameInput);
-    validatePhoneNumber(userPhoneNumberInput);
-    validateEmail(userEmailInput);
-
-    const userInfoData = {
-      name: userNameInput,
-      phone: userPhoneNumberInput,
-      email: userEmailInput,
-    };
-
-    console.log(userInfoData);
-
-    setUserNameInput('');
-    setUserEmailInput('');
-    setUserPhoneNumber('');
-    setUserFoodInput('');
+    setFormErrors(validate(formValues));
+    setIsSubmit(true);
   };
 
-  // Input Validator functions
-  const validateNameInput = input => {
-    if (input === '') {
-      setErrorMessages({
-        ...errorMessages,
-        userNameError: 'Username cannnot be empty',
-      });
+  useEffect(() => {
+    console.log(formErrors);
+    if (Object.keys(formErrors).length === 0 && isSubmit) {
+      setFormValues(initalValues);
     }
-  };
+  }, [formErrors]);
 
-  const validatePhoneNumber = input => {
-    if (input === '') {
-      setErrorMessages({
-        ...errorMessages,
-        userPhoneNumberError: 'Please Enter Your Phone Number',
-      });
-    } else if (input.length < 10 || input.length > 10) {
-      setErrorMessages({
-        ...errorMessages,
-        userPhoneNumberError: 'Please Enter a valid Phone Number',
-      });
+  const validate = values => {
+    const errors = {};
+    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i;
+    if (!values.username) {
+      errors.username = 'Username is required';
     }
-  };
-
-  const validateEmail = input => {
-    const mailFormat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-
-    if (input.match(mailFormat)) {
-    } else if (input === '') {
-      setErrorMessages({
-        ...errorMessages,
-        userEmailError: 'Please enter a email address',
-      });
-    } else {
-      setErrorMessages({
-        ...errorMessages,
-        userEmailError: 'You have entered a invalid email address',
-      });
+    if (!values.userPhone) {
+      errors.phoneNumber = 'Phone number is required';
+    } else if (values.userPhone.length < 10 || values.userPhone.length > 10) {
+      errors.phoneNumber = 'Enter a valid phone number';
     }
+
+    if (!values.email) {
+      errors.email = 'Email is required';
+    } else if (!regex.test(values.email)) {
+      errors.email = 'This is not a valid format';
+    }
+
+    if (!values.userFood) {
+      errors.userFood = 'Add a food';
+    }
+
+    return errors;
   };
 
   return (
@@ -98,39 +62,44 @@ const OrderForm = () => {
         <label>name</label>
         <input
           type="text"
-          value={userNameInput}
-          onChange={userNameChangeHandler}
+          value={formValues.username}
+          onChange={inputChangeHandler}
+          name="username"
         />
-        <p>{errorMessages.userNameError}</p>
+        <p>{formErrors.username}</p>
       </div>
 
       <div className="inputBox">
         <label>Phone</label>
         <input
           type="number"
-          value={userPhoneNumberInput}
-          onChange={userPhoneNumberChangeHandler}
+          value={formValues.userPhone}
+          onChange={inputChangeHandler}
+          name="userPhone"
         />
-        <p>{errorMessages.userPhoneNumberError}</p>
+        <p>{formErrors.phoneNumber}</p>
       </div>
 
       <div className="inputBox">
         <label>Email</label>
         <input
           type="email"
-          value={userEmailInput}
-          onChange={userEmailChangeHandler}
+          value={formValues.email}
+          onChange={inputChangeHandler}
+          name="email"
         />
-        <p>{errorMessages.userEmailError}</p>
+        <p>{formErrors.email}</p>
       </div>
 
       <div className="inputBox">
         <label>Food</label>
         <input
           type="text"
-          value={userFoodInput}
-          onChange={userFoodChangeHandler}
+          value={formValues.userFood}
+          onChange={inputChangeHandler}
+          name="userFood"
         />
+        <p>{formErrors.userFood}</p>
       </div>
 
       <button type="submit" className="btn" onSubmit={submitHandler}>
