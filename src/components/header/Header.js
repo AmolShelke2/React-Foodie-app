@@ -11,7 +11,7 @@ const Header = () => {
   return (
     <header>
       <a href="#!" className="logo">
-        <i className="fas fa-utensils"></i>Food
+        <i className="fas fa-utensils"></i>Foodie
       </a>
 
       <div
