@@ -3,7 +3,7 @@
 Fully Responsive Foodie Landing page created with ReactJS.
 I have already created this project with HTML CSS and JavaScript,
 but now I created it once again with React. By making
-seperate components and using useState hook.
+seperate components and using useState hook. [Live Deployment link](https://react-foodie-app.vercel.app/)
 
 <hr>
 
@@ -35,6 +35,11 @@ seperate components and using useState hook.
 </ol>
 
 <hr>
+
+## Preview: 
+
+[Preview of the project](https://www.linkedin.com/feed/update/urn:li:activity:6996120927268671488/)
+
 
 ## Available Scripts
 
