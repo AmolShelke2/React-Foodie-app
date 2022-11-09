@@ -25,7 +25,6 @@ const OrderForm = () => {
   };
 
   useEffect(() => {
-    console.log(formErrors);
     if (Object.keys(formErrors).length === 0 && isSubmit) {
       setFormValues(initalValues);
     }
@@ -57,55 +56,65 @@ const OrderForm = () => {
   };
 
   return (
-    <form onSubmit={submitHandler}>
-      <div className="inputBox">
-        <label>name</label>
-        <input
-          type="text"
-          value={formValues.username}
-          onChange={inputChangeHandler}
-          name="username"
-        />
-        <p>{formErrors.username}</p>
-      </div>
+    <div className="order-form">
+      {Object.keys(formErrors).length === 0 && isSubmit ? (
+        <p className="text success">
+          Thanks for ordering! but it's just a demo App.
+        </p>
+      ) : (
+        console.log({ ...formValues })
+      )}
 
-      <div className="inputBox">
-        <label>Phone</label>
-        <input
-          type="number"
-          value={formValues.userPhone}
-          onChange={inputChangeHandler}
-          name="userPhone"
-        />
-        <p>{formErrors.phoneNumber}</p>
-      </div>
+      <form onSubmit={submitHandler}>
+        <div className="inputBox">
+          <label>name</label>
+          <input
+            type="text"
+            value={formValues.username}
+            onChange={inputChangeHandler}
+            name="username"
+          />
+          <p>{formErrors.username}</p>
+        </div>
 
-      <div className="inputBox">
-        <label>Email</label>
-        <input
-          type="email"
-          value={formValues.email}
-          onChange={inputChangeHandler}
-          name="email"
-        />
-        <p>{formErrors.email}</p>
-      </div>
+        <div className="inputBox">
+          <label>Phone</label>
+          <input
+            type="number"
+            value={formValues.userPhone}
+            onChange={inputChangeHandler}
+            name="userPhone"
+          />
+          <p>{formErrors.phoneNumber}</p>
+        </div>
 
-      <div className="inputBox">
-        <label>Food</label>
-        <input
-          type="text"
-          value={formValues.userFood}
-          onChange={inputChangeHandler}
-          name="userFood"
-        />
-        <p>{formErrors.userFood}</p>
-      </div>
+        <div className="inputBox">
+          <label>Email</label>
+          <input
+            type="email"
+            value={formValues.email}
+            onChange={inputChangeHandler}
+            name="email"
+          />
+          <p>{formErrors.email}</p>
+        </div>
 
-      <button type="submit" className="btn" onSubmit={submitHandler}>
-        order now
-      </button>
-    </form>
+        <div className="inputBox">
+          <label>Food</label>
+          <input
+            type="text"
+            value={formValues.userFood}
+            onChange={inputChangeHandler}
+            name="userFood"
+          />
+          <p>{formErrors.userFood}</p>
+        </div>
+
+        <button type="submit" className="btn" onSubmit={submitHandler}>
+          order now
+        </button>
+      </form>
+    </div>
   );
 };
 
