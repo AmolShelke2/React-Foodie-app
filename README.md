@@ -7,6 +7,12 @@ seperate components and using useState hook. [Live Deployment link](https://reac
 
 <hr>
 
+## Preview: 
+
+[Preview of the project](https://www.linkedin.com/feed/update/urn:li:activity:6996120927268671488/)
+
+<hr>
+
 ## Tech Stack:
 
 - HTML
@@ -20,7 +26,9 @@ seperate components and using useState hook. [Live Deployment link](https://reac
 - Hamburger Menu
 - Navbar responsive
 - Fully Responsive
-- use state to manage and create component
+- useState to manage and create component
+
+<hr>
 
 ## Sections
 
@@ -35,10 +43,6 @@ seperate components and using useState hook. [Live Deployment link](https://reac
 </ol>
 
 <hr>
-
-## Preview: 
-
-[Preview of the project](https://www.linkedin.com/feed/update/urn:li:activity:6996120927268671488/)
 
 
 ## Available Scripts
