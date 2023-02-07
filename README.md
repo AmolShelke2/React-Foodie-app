@@ -11,6 +11,10 @@ seperate components and using useState hook. [Live Deployment link](https://reac
 
 [Preview of the project](https://www.linkedin.com/feed/update/urn:li:activity:6996120927268671488/)
 
+### Screenshot
+
+![react-foodie-app vercel app_(Nest Hub Max)](https://user-images.githubusercontent.com/95171638/217295265-3bf9bc01-3ea5-4f78-88cd-d976f30c6aca.png)
+
 <hr>
 
 ## Tech Stack:
